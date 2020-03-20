@@ -5,8 +5,8 @@ let MongoClient = require('mongodb').MongoClient;
 let app = express();
   app.use(bodyParser.urlencoded({extended: false}));
     app.use(bodyParser.json());
-var routes=require("./src/routes/movies.js");
-app.use('/movies',routes);
+var routes=require("./src/routes/customer.js");
+app.use('/customer',routes);
 app.use((err,req,res,next)=>
 {
 if(err)
